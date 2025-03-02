@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+    <h2>Welcome, {{ user.username }}!</h2>
+    <p>This is the homepage of DillonWeb.</p>
+{% else %}
+    <h2>Welcome to DillonWeb</h2>
+    <p>Please log in or sign up to continue.</p>
+{% endif %}
+{% endblock %}
+
